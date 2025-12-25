@@ -1,5 +1,5 @@
 {% set name = "prismatools" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prismatools-{{ version }}.tar.gz
-  sha256: 20d7ca9769ac5db771daa8f822e48fe58f328dd737c073e99678b0dc754b6f35
+  sha256: 3e8014a8877192a339651b748e37a8849784db6268eac6cad7462b20eba5f669
 
 build:
   noarch: python
@@ -26,11 +26,17 @@ requirements:
   run:
     - python >={{ python_min }}
     - affine
+    - bqplot
     - h5py
+    - ipyevents
+    - ipyfilechooser
     - ipyleaflet
+    - ipywidgets
     - leafmap
+    - localtileserver
     - numpy
     - rioxarray
+    - scikit-learn
     - xarray
 
 test:
